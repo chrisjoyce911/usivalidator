@@ -142,3 +142,6 @@ func main() {
 	fmt.Printf("Next factor after %d is %d\n", factor, nextFactor)
 }
 ```
+
+
+[![Build Status](https://travis-ci.com/chrisjoyce911/usivalidator.svg?branch=main)](https://travis-ci.com/chrisjoyce911/usivalidator)

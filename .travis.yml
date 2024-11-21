@@ -1,0 +1,30 @@
+language: go
+
+go:
+  - 1.20.x  # Specify the Go version to use
+
+# Enable modules if not already enabled
+env:
+  - GO111MODULE=on
+
+# Specify the branches to build
+branches:
+  only:
+    - main
+    - develop
+
+# Install dependencies (if any) and prepare for tests
+install:
+  - go mod tidy
+
+# Run the tests
+script:
+  - go test ./... -v
+
+# Notify on build success or failure (optional)
+notifications:
+  email:
+    recipients:
+      - chris@joyce.au  
+    on_success: change  
+    on_failure: always
